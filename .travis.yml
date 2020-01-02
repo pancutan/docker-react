@@ -12,14 +12,13 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: "us-west-2"
-  app: "docker2" # El nombre del proyecto dentro de ELB
-  env: "Docker2-env" # Nombre del environment que habiamos creado en ELB
-  # edge: true # Solo si da "missing bucket_name error"
-  bucket_name: "elasticbeanstalk-us-west-2-599651702009" # Buscar en la consola s3 en cual bucker esta corriendo
-  bucket_path: "docker2" # Usar el explorador de la consola s3, o copiar desde app:
+  app: "docker2"
+  env: "Docker2-env"
+  bucket_name: "elasticbeanstalk-us-west-2-599651702009"
+  bucket_path: "docker2"
   on:
-    branch: master # Rama, interesante para tener varios ambientes
+    branch: master
   access_key_id: $AWS_ACCESS_KEY
-  secret_access_key:
-    secure: "$AWS_SECRET_KEY"
+  secret_access_key: $AWS_SECRET_KEY
+  # edge: true # Solo si da "missing bucket_name error"
 
