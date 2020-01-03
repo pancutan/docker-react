@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Cambio introducido en rama feature (git checkout -b feature)
         </a>
       </header>
     </div>
